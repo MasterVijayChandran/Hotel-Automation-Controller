@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MasterVijayChandran/Hotel-Automation-Controller/issues"
   },
-  "homepage": "https://github.com/MasterVijayChandran/Hotel-Automation-Controller#readme"
+  "homepage": "https://github.com/MasterVijayChandran/Hotel-Automation-Controller#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
 }

@@ -3,8 +3,8 @@ const Ajv = require("ajv");
 const utils = require("./lib/utils/utils");
 const authHandler = require("./lib/handlers/auth");
 const fastify = require('fastify')({
-    logger: true,
-    logLevel: appConfig.logger_level
+    logger : true,
+    logLevel : appConfig.logger_level
   })
 const routes = require('./lib/routes')
 require("./config/db");
@@ -18,8 +18,6 @@ fastify.addHook("onError", utils.handleError);
 fastify
 .decorate("validateSession", authHandler.basicValidate)
 .register(require("fastify-auth"))
-// .register(require('fastify-knex'),
-    // appConfig.db_config)
 .after(()=>{
     routes.registerRoutes(fastify);
 })
@@ -27,10 +25,10 @@ global.logger = fastify.log;
 
 const ajv = new Ajv({
   // the fastify defaults (if needed)
-  removeAdditional: true,
-  useDefaults: true,
-  coerceTypes: true,
-  allErrors: true
+  removeAdditional : true,
+  useDefaults : true,
+  coerceTypes : true,
+  allErrors : true
 });
 
 //set fastify default schema compiler

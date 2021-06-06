@@ -1,4 +1,4 @@
-const appConfig = require('./lib/config/app')
+const appConfig = require('./config/app')
 const Ajv = require("ajv");
 const utils = require("./lib/utils/utils");
 const authHandler = require("./lib/handlers/auth");
@@ -7,7 +7,7 @@ const fastify = require('fastify')({
     logLevel: appConfig.logger_level
   })
 const routes = require('./lib/routes')
-require("./lib/config/db");
+require("./config/db");
 fastify.register(require("fastify-swagger"), appConfig.swagger_options)
 fastify.register(require("fastify-cors"), appConfig.cors_options);
 

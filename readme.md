@@ -1,6 +1,6 @@
 # Project Title
 
-A nice project with a nice description
+Hotel Automation Controller Project
 
 ---
 ## Requirements

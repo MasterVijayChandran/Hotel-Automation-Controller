@@ -15,10 +15,10 @@ module.exports = {
       client: "pg",
       version: "11.2",
       connection: {
-        host: process.env.POSTGRES_HOST || "hotelmanagementserver.postgres.database.azure.com",
+        host: process.env.POSTGRES_HOST || "localhost",
         port: process.env.POSTGRES_PORT || "5432",
-        user: process.env.POSTGRES_USERNAME || "vijayserver@hotelmanagementserver",
-        password: process.env.POSTGRES_PASSWORD || "Administrator@123",
+        user: process.env.POSTGRES_USERNAME || "vijay",
+        password: process.env.POSTGRES_PASSWORD || "vijay@123",
         database: process.env.POSTGRES_DATABASE || "postgres",
       }
   },
